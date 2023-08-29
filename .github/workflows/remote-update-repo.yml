@@ -1,7 +1,8 @@
 name: Remote Update Flatpak Repo
 
 on:
-    release: 
+    release:
+        types: [published]
 
 env:
     TARGET_REPO: flatpak-pages-repo
@@ -15,8 +16,8 @@ jobs:
           - name: Dispatch Remote Workflow
             uses: convictional/trigger-workflow-and-wait@v1.6.5
             with:
-                github-token: ${{ secrets.PAT }}
+                github_token: ${{ secrets.PAT }}
                 owner: ${{ github.repository_owner }}
                 repo: ${{ env.TARGET_REPO }}
                 workflow_file_name: update-repo.yml
-                client-payload: '{"repo":"${{ github.repository }}", "commit":"${{ github.sha }}","manifest":"${{ env.MANIFEST_PATH }}"}'
+                client_payload: '{"repo":"${{ github.repository }}", "commit":"${{ github.sha }}","manifest":"${{ env.MANIFEST_PATH }}"}'
