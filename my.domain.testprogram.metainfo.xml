@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="console-application">
+  <id>my.domain.testprogram</id>
+
+  <name>Test Program</name>
+  <summary>A minimal test program</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <description>
+    <p>
+      A minimal test program
+    </p>
+  </description>
+
+  <icon type="stock">my.domain.testprogram</icon>
+
+  <categories>
+    <category>Development</category>
+    <category>Amusement</category>
+  </categories>
+
+  <provides>
+    <binary>test-program</binary>
+  </provides>
+</component>
