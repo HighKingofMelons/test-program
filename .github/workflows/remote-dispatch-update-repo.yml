@@ -1,4 +1,4 @@
-name: Remote Update Flatpak Repo
+name: Remote Dispatch Update Flatpak Repo
 
 on:
     release:
