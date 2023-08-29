@@ -1,0 +1,25 @@
+{
+    "app-id" : "my.domain.testprogram",
+    "runtime" : "org.freedesktop.Platform",
+    "runtime-version" : "22.08",
+    "sdk" : "org.freedesktop.Sdk",
+    "command" : "test-program",
+    "finish-args" : [
+    ],
+    "modules" : [
+        {
+            "name" : "test-program",
+            "buildsystem" : "simple",
+            "build-commands" : [
+		"mkdir -p /app/bin",
+		"cp test-program /app/bin"
+            ],
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "path" : "./"
+                }
+            ]
+        }
+    ]
+}
